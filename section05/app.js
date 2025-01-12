@@ -1,41 +1,16 @@
-// let name = 'Max';
+var name = "Song";
 
-// if (name === 'Max') {
-//   let hobbies = ['Sports', 'Cooking'];
-//   console.log(hobbies);
-
-// }
-
-// function greet() {
-//   let age = 30;
-//   let name = 'Manuel';
-//   console.log(name, age, hobbies);
-// }
-
-// console.log(name, hobbies);
-
-// greet();
-
-/*==========*/
-
-/*
-'use strict';
-
-const userName = 'Max';
-var undefined = 5;
-
-console.log(userName);
-*/
-
-
-function getName() {
-    return prompt("Your name: ")
+if (name === "Song") {
+  let habbies = ["Sports", "Cooking"];
+  console.log(habbies);
 }
 
 function greet() {
-    const userName = getName()
-    console.log("Hello", userName)
+  var age = 960328;
+  var name = "Jun Han";
+  console.log(name, age, habbies);
 }
 
+console.log(name, habbies);
 
 greet();
