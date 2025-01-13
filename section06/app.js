@@ -52,8 +52,48 @@ startGameBtn.addEventListener("click", () => {
   gameIsRunning = true;
   console.log("게임 시작~~");
   const playerChoice = getPlayerChoice();
-  const computerChoice = getComputerChoice(); // 왜 함수만 호출 하면 되는데 왜 굳이 상수를 만들었는지 이해가 안됨.
+  const computerChoice = getComputerChoice();
   console.log("컴퓨터 뭐 냈는지 궁금함. ", computerChoice);
   const winner = getWinner(playerChoice, computerChoice);
-  alert(winner);
+  console.log(winner);
+
+  let message = `You picked ${playerChoice}, computer picked ${computerChoice}, therefore you had a`;
+
+  if (winner === RESCLUT_DRAW) {
+    message = message + "had a draw.";
+  } else if ((winner = RESCLUT_PLAYER_WINS)) {
+    message = message + "won.";
+  } else {
+    message = message + "lost .";
+  }
+  alert(message);
+  gameIsRunning = false;
 });
+
+const sumUp = (...numbers) => {
+  let sum = 0;
+  for (const num of numbers) {
+    sum += num;
+  }
+  return sum;
+};
+
+console.log(sumUp(1, 5, 10, -3, 6, 10));
+
+/* const subtractUp = function (...numbers) {
+  let sum = 0;
+  for (const num of numbers) {
+    sum -= num;
+  }
+  return sum;
+};
+ */
+const subtractUp = function () {
+  let sum = 0;
+  for (const num of numbers) {
+    sum -= num;
+  }
+  return sum;
+};
+console.log("subtractUp", subtractUp(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
